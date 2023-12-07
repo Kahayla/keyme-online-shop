@@ -1,0 +1,102 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background-color: #eeddd3;
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.container {
+	padding: 0 1rem;
+	max-width: 75rem;
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 3rem;
+	text-align: center;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	color: #7d4f50;
+	font-style: italic;
+}
+
+.product-grid {
+	margin: 3rem auto;
+	display: grid;
+	padding: 2rem;
+	background-color: #fbfefb;
+	border-radius: 0.5rem;
+}
+
+.product-grid img {
+	width: 16rem;
+	margin: 0 auto;
+}
+
+.product-grid button {
+	display: block;
+	width: 100%;
+	background-color: #e8d1c5;
+	border-radius: 0.5rem;
+	padding: 1rem;
+	font-size: 1rem;
+	border: #7d4f50;
+	color: #7d4f50;
+}
+
+.product-grid button:hover {
+	cursor: pointer;
+	background-color: rosybrown;
+	color: honeydew;
+}
+
+.product-grid h2,
+p {
+	text-align: center;
+	color: #893f45;
+}
+
+.description {
+	line-height: 1.5rem;
+	color: #706677;
+}
+
+.price {
+	font-weight: bold;
+}
+
+@media only screen and (min-width: 40rem) {
+	.container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 2rem;
+		margin: 2rem auto;
+	}
+	.product-grid {
+		margin: 0;
+	}
+
+	h1 {
+		font-size: 5rem;
+		line-height: 1;
+		margin: 4rem 0;
+	}
+
+	.product-grid img {
+		width: 18rem;
+	}
+}
+
+@media only screen and (min-width: 62rem) {
+	.container {
+		grid-template-columns: repeat(3, 1fr);
+		margin: 2rem auto;
+	}
+
+	.product-grid img {
+		width: 20rem;
+	}
+}
